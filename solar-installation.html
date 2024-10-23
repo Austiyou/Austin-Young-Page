@@ -4,38 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar Installation Service</title>
+
+    <!-- Google Fonts for Modern Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
+        /* Global Styles */
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f1f8e9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
         a {
             text-decoration: none;
-            color: #4caf50;
-            display: inline-block;
-            margin-top: 20px;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://media.istockphoto.com/id/1192834365/photo/solar-panels-on-the-roof-of-the-modern-house.jpg?s=1024x1024&w=is&k=20&c=gqv_kqwp3QoMKM_-f1Pn57wBS0ShA6UIObiSuAQvLms=');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero a {
+            background-color: #4caf50;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 50px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .why-choose-us h2 {
+            margin-bottom: 20px;
+        }
+
+        .why-choose-us p {
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        .reasons {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .reason {
+            width: 30%;
+            min-width: 250px;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        /* Contact Form Section */
+        .contact-form {
+            padding: 50px;
+            background-color: #fafafa;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 50px;
+            background-color: #fff;
+        }
+
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            margin-bottom: 5px;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .gallery img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
         }
     </style>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelector('a[href="#contact-form"]').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#contact-form').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </head>
 <body>
-    <div>
-        <h1>Solar Installation Request</h1>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Full Name" required><br>
-            <input type="email" name="email" placeholder="Email" required><br>
-            <input type="tel" name="phone" placeholder="Phone Number" required><br>
-            <textarea name="message" rows="4" placeholder="Describe your solar needs" required></textarea><br>
-            <button type="submit">Submit</button>
-        </form>
-        <a href="index.html">Back to Home</a> | <a href="roofing-form.html">Request Roofing Service</a>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div>
+            <h1>Solar Installation Made Easy</h1>
+            <p>Power your home with renewable energy and save money!</p>
+            <a href="#contact-form">Request a Quote</a>
+        </div>
     </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="why-choose-us">
+        <h2>Why Choose Our Solar Installation Service?</h2>
+        <p>We provide high-quality solar installations with professional service and expert consultation. Reduce your energy costs and contribute to a cleaner planet with our trusted team.</p>
+        <div class="reasons">
+            <div class="reason">
+                <h3>Expert Installers</h3>
+                <p>Our team is trained to deliver the best installations.</p>
+            </div>
+            <div class="reason">
+                <h3>Affordable Solutions</h3>
+                <p>We offer competitive pricing with no hidden fees.</p>
+            </div>
+            <div class="reason">
+                <h3>Eco-Friendly</h3>
+                <p>Join the movement towards renewable energy.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form" id="contact-form">
+        <h2>Request a Quote</h2>
+        <div class="form-container">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <textarea name="message" rows="4" placeholder="Describe your solar needs" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How long does installation take?</h3>
+            <p>Most installations are completed within 1-2 days.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What are the costs involved?</h3>
+            <p>We offer customized quotes based on your needs and roof size.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <img src="https://via.placeholder.com/300" alt="Solar Panel Installation 1">
+        <img src="https://via.placeholder.com/300" alt="Solar Panel Installation 2">
+        <img src="https://via.placeholder.com/300" alt="Solar Panel Installation 3">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Solar Installation Services</p>
+    </footer>
+
 </body>
 </html>
