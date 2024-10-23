@@ -60,15 +60,6 @@
             text-align: center;
         }
 
-        .why-choose-us h2 {
-            margin-bottom: 20px;
-        }
-
-        .why-choose-us p {
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-        }
-
         .reasons {
             display: flex;
             justify-content: space-around;
@@ -86,16 +77,6 @@
         .contact-form {
             padding: 50px;
             background-color: #fafafa;
-        }
-
-        .contact-form h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .form-container {
-            max-width: 500px;
-            margin: 0 auto;
         }
 
         input, textarea {
@@ -120,25 +101,6 @@
             background-color: #388e3c;
         }
 
-        /* FAQ Section */
-        .faq {
-            padding: 50px;
-            background-color: #fff;
-        }
-
-        .faq h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .faq-item {
-            margin-bottom: 15px;
-        }
-
-        .faq-item h3 {
-            margin-bottom: 5px;
-        }
-
         /* Gallery Section */
         .gallery {
             display: flex;
@@ -160,14 +122,6 @@
             color: white;
         }
     </style>
-
-    <!-- Smooth Scrolling Script -->
-    <script>
-        document.querySelector('a[href="#contact-form"]').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector('#contact-form').scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
 </head>
 <body>
 
@@ -184,54 +138,25 @@
     <div class="why-choose-us">
         <h2>Why Choose Our Solar Installation Service?</h2>
         <p>We provide high-quality solar installations with professional service and expert consultation. Reduce your energy costs and contribute to a cleaner planet with our trusted team.</p>
-        <div class="reasons">
-            <div class="reason">
-                <h3>Expert Installers</h3>
-                <p>Our team is trained to deliver the best installations.</p>
-            </div>
-            <div class="reason">
-                <h3>Affordable Solutions</h3>
-                <p>We offer competitive pricing with no hidden fees.</p>
-            </div>
-            <div class="reason">
-                <h3>Eco-Friendly</h3>
-                <p>Join the movement towards renewable energy.</p>
-            </div>
-        </div>
     </div>
 
     <!-- Contact Form Section -->
     <div class="contact-form" id="contact-form">
         <h2>Request a Quote</h2>
-        <div class="form-container">
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Phone Number" required>
-                <textarea name="message" rows="4" placeholder="Describe your solar needs" required></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>How long does installation take?</h3>
-            <p>Most installations are completed within 1-2 days.</p>
-        </div>
-        <div class="faq-item">
-            <h3>What are the costs involved?</h3>
-            <p>We offer customized quotes based on your needs and roof size.</p>
-        </div>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <textarea name="message" rows="4" placeholder="Describe your solar needs" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
     </div>
 
     <!-- Gallery Section -->
     <div class="gallery">
         <img src="https://cdn.stocksnap.io/img-thumbs/960w/solar-building_EPYDFKPLZJ.jpg" alt="Solar Panel Installation 1">
-        <img src="https://images.unsplash.com/photo-1610895459214-0ff9285e6bad" alt="Solar Panel Installation 2">
-        <img src="https://shutterstock.7eer.net/c/426523/42119/1305?u=http%3A%2F%2Fwww.shutterstock.com%2Fpic.mhtml%3Fid%3D1932784625" alt="Solar Panel Installation 3">
+        <img src="https://images.unsplash.com/photo-1610895459214-0ff9285e6bad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Solar Panel Installation 2">
+        <img src="https://image.shutterstock.com/image-photo/solar-panels-installation-on-house-260nw-1932784625.jpg" alt="Solar Panel Installation 3">
     </div>
 
     <!-- Footer -->
